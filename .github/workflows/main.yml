@@ -1,0 +1,10 @@
+on:
+  watch:
+    types: [started]
+
+jobs:
+  echo-star-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Who Starred the Repo
+        run: echo "${{ github.event.sender.login }} starred ${{ github.repository }}"
